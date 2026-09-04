@@ -1,0 +1,53 @@
+{
+  "newRelease": {
+    "title": "A Court of Splintered Harmony",
+    "series": "A Court of Thorns and Roses",
+    "releaseDate": "2026-10-27",
+    "confirmed": true
+  },
+  "series": [
+    {
+      "id": "tog",
+      "name": "Throne of Glass",
+      "books": [
+        { "id": "tog-1", "title": "Throne of Glass", "order": 1, "audiobookMinutes": 783, "pages": 406, "chapters": [] },
+        { "id": "tog-2", "title": "Crown of Midnight", "order": 2, "audiobookMinutes": 763, "pages": 448, "chapters": [] },
+        { "id": "tog-3", "title": "Heir of Fire", "order": 3, "audiobookMinutes": 1076, "pages": 592, "chapters": [] },
+        { "id": "tog-4", "title": "Queen of Shadows", "order": 4, "audiobookMinutes": 1243, "pages": 672, "chapters": [] },
+        { "id": "tog-5", "title": "Empire of Storms", "order": 5, "audiobookMinutes": 1518, "pages": 689, "chapters": [] },
+        { "id": "tog-6", "title": "Tower of Dawn", "order": 6, "audiobookMinutes": 1359, "pages": 664, "chapters": [] },
+        { "id": "tog-7", "title": "Kingdom of Ash", "order": 7, "audiobookMinutes": 1991, "pages": 992, "chapters": [] }
+      ]
+    },
+    {
+      "id": "acotar",
+      "name": "A Court of Thorns and Roses",
+      "books": [
+        { "id": "acotar-1", "title": "A Court of Thorns and Roses", "order": 1, "audiobookMinutes": 977, "pages": 419, "chapters": [] },
+        { "id": "acotar-2", "title": "A Court of Mist and Fury", "order": 2, "audiobookMinutes": 1396, "pages": 626, "chapters": [] },
+        { "id": "acotar-3", "title": "A Court of Wings and Ruin", "order": 3, "audiobookMinutes": 1509, "pages": 699, "chapters": [] },
+        { "id": "acotar-3-5", "title": "A Court of Frost and Starlight", "order": 4, "audiobookMinutes": 383, "pages": 229, "chapters": [] },
+        { "id": "acotar-4", "title": "A Court of Silver Flames", "order": 5, "audiobookMinutes": 1565, "pages": 757, "chapters": [] }
+      ]
+    },
+    {
+      "id": "crescent-city",
+      "name": "Crescent City",
+      "books": [
+        { "id": "cc-1", "title": "House of Earth and Blood", "order": 1, "audiobookMinutes": 1670, "pages": 803, "chapters": [] },
+        { "id": "cc-2", "title": "House of Sky and Breath", "order": 2, "audiobookMinutes": 1662, "pages": 801, "chapters": [] },
+        { "id": "cc-3", "title": "House of Flame and Shadow", "order": 3, "audiobookMinutes": 1782, "pages": 816, "chapters": [] }
+      ]
+    }
+  ],
+  "notes": [
+    "NARRATOR CORRECTION: Elizabeth Evans narrates Throne of Glass and Crescent City, not ACOTAR. Standard ACOTAR audiobooks: Jennifer Ikeda (books 1-2), Amanda Leigh Cobb (book 3 & novella), Stina Nielsen (A Court of Silver Flames).",
+    "The Assassin's Blade (Throne of Glass novella collection) is intentionally excluded from the tog series -- main 7 novels only. 772 min / 435 pages if you want to add it later.",
+    "A Court of Splintered Harmony (ACOTAR book 6, releasing 2026-10-27) is confirmed via sarahjmaas.com/Variety but has no audiobook or page count yet since it hasn't released -- it is NOT listed in the series array above so it doesn't get double counted as something to 'read' before its own release; update this file once official numbers exist if you want it included in future totals.",
+    "A Court of Forgotten Melody (ACOTAR book 7) is confirmed for 2027-01-12 but out of scope for this release countdown.",
+    "PAGE COUNT VARIANCE (editions differ, lower confidence): Crown of Midnight (432 vs 448, used 448), A Court of Frost and Starlight (229, thin sourcing), House of Flame and Shadow (816 vs 848, used 816).",
+    "AUDIOBOOK LENGTH VARIANCE: Throne of Glass cited as both 12h47m and 13h3m -- used 783 min (13h3m), medium confidence. All others corroborated by 2+ sources.",
+    "Crescent City book 4 is confirmed to exist eventually but has no title/date/numbers yet -- omitted rather than guessed.",
+    "Sources: Audible.com/.ca, Libro.fm, Goodreads editions pages, readinglength.com, howlongtoread.com, Booklist Queen, sarahjmaas.com, Variety.com."
+  ]
+}
