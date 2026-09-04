@@ -19,8 +19,6 @@ function seasonIcon(id: Season, season: Season) {
       return (
         <svg viewBox="0 0 24 24" width="52%" height="52%" fill="currentColor" aria-hidden="true">
           <path d="M12 2l2.1 6.4H21l-5.4 4 2.1 6.5L12 15l-5.7 3.9 2.1-6.5-5.4-4h6.9z" />
-          <circle cx="19.5" cy="4.5" r="1.1" />
-          <circle cx="4.5" cy="6" r=".8" />
         </svg>
       );
     case "spring": {
