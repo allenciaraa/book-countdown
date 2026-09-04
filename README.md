@@ -1,32 +1,34 @@
-# React + TypeScript + Vite
+# sarahjmaths
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A countdown calculator for Sarah J. Maas fans. Pick which series you're following and which books you *haven't* read yet, and it works out how many pages or audiobook minutes a day you need to finish before **A Court of Splintered Harmony** releases (Oct 27, 2026).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Covers Throne of Glass, A Court of Thorns and Roses, and Crescent City
+- Books default to "read" — check off only the ones you haven't finished
+- Optional in-progress tracking (by page or by timestamp) for a book you've started
+- Live daily pace in both pages/day and minutes/day, based on days remaining
+- A "road ahead" chart of every unread book, in reading order
 
-## React Compiler
+All book data (page counts, audiobook runtimes) lives in `src/data/books.json` and is bundled at build time — nothing is fetched at runtime.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting started
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build locally |
+| `npm test` | Run the Vitest suite |
+| `npm run lint` | Run Oxlint |
+
+## Tech stack
+
+React 19 + TypeScript + Vite, plain CSS, no router or state library.

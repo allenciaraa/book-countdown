@@ -19,10 +19,14 @@ export function BookRow({ book, read, progress, onToggle, onSetProgress }: BookR
     progress?.unit === "pages" ? String(progress.value) : "",
   );
   const [hourInput, setHourInput] = useState(
-    progress?.unit === "minutes" ? String(Math.floor(progress.value / 60)) : "",
+    progress?.unit === "minutes"
+      ? String(Math.floor((book.audiobookMinutes - progress.value) / 60))
+      : "",
   );
   const [minuteInput, setMinuteInput] = useState(
-    progress?.unit === "minutes" ? String(progress.value % 60) : "",
+    progress?.unit === "minutes"
+      ? String((book.audiobookMinutes - progress.value) % 60)
+      : "",
   );
 
   const remaining = read ? { minutes: 0, pages: 0 } : remainingForBook(book, progress);
@@ -47,9 +51,10 @@ export function BookRow({ book, read, progress, onToggle, onSetProgress }: BookR
     }
     const h = Number(hoursRaw) || 0;
     const m = Number(minutesRaw) || 0;
+    const minutesLeft = Math.max(0, Math.min(h * 60 + m, book.audiobookMinutes));
     onSetProgress(book.id, {
       unit: "minutes",
-      value: Math.max(0, Math.min(h * 60 + m, book.audiobookMinutes)),
+      value: book.audiobookMinutes - minutesLeft,
     });
   }
 
@@ -134,7 +139,7 @@ export function BookRow({ book, read, progress, onToggle, onSetProgress }: BookR
               className={`book-progress-unit${unit === "minutes" ? " book-progress-unit--active" : ""}`}
               onClick={() => setUnit("minutes")}
             >
-              Time
+              Time left
             </button>
           </div>
 
@@ -153,7 +158,7 @@ export function BookRow({ book, read, progress, onToggle, onSetProgress }: BookR
             </label>
           ) : (
             <label className="book-progress-field">
-              at
+              with
               <input
                 type="number"
                 inputMode="numeric"
@@ -170,7 +175,7 @@ export function BookRow({ book, read, progress, onToggle, onSetProgress }: BookR
                 value={minuteInput}
                 onChange={(e) => commitMinutes(hourInput, e.target.value)}
               />
-              m of {formatDuration(book.audiobookMinutes)}
+              m left of {formatDuration(book.audiobookMinutes)}
             </label>
           )}
 
